@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+  
+
+
+    <script>
+        
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+              
+              $('ul li').each(function(indice, elemento){
+                
+                $.data(elemento, 'posicion ', indice);
+                 //Añade datops al os div
+              });
+
+              $('ul li').each(function(indice, 'posicion'){
+
+                console.log($.data(elemento, 'posicion'));
+                //Imorime en la cosnola los valores de la posicion d cada uno d elos elemtos div
+              });
+                
+            });
+    </script>
+
+    </head>
+        
+    <body>
+        <ul>
+            <li>Uno</li>
+            <li>Dos</li>
+            <li>Tres</li>
+        </ul>
+
+    </body>
+</html>

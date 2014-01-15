@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+  
+
+
+    <script>
+        
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+             
+               //Esto es lo mas parecido a un funcion , metodo o procedimentos alacenados en la progrtamacio orientado aobjetos
+               $("#miInput").on('cambio', function(){
+                    if (this.checked) {
+                        $("#miInput").removeAttr('checked');
+                        $('.cambiar').text('Encender');
+                    }
+                    else
+                    {
+                        $("#miInput").attr('checked', 'checked');
+                        $(".cambiar").text('Apagado');
+                    }
+               });
+
+               //Aqui se manda a llamar el metodo o funcion
+
+               $('.cambiar').on('check',function(){
+                    $("#miInput").trigger('cambio');
+               });
+
+            });
+    </script>
+
+    </head>
+        
+    <body>
+        <input type="checkbox" id="miInput" checked="checked">
+        <button class="cambiar">Apagar</button>
+        <button class="cambiar">Apagar</button>
+    </body>
+</html>

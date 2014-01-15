@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <style>
+    .test
+    {
+        background-color: red;
+    }
+
+    .test2
+    {
+        background-color: green;
+    }
+
+    .test3
+    {
+        background-color: blue;
+    }
+    </style>
+    <script>
+            var seleccion;
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+              
+                $(document).on('click', function () {//cuando se da click en el div
+                      $("#test").addClass("test");//se añade la clase test y el div sele añade un fonfo rojo
+
+                      $(".test2").removeClass("test2");
+                      //eliminal la clase que se le pasa entre parametros
+
+                      $("#test3").toggleClass("test3");
+                      // que hace es que si tiene la clase test3 la eliminay si no la tien la crea
+
+
+            
+            }); 
+           
+            });
+    </script>
+  
+
+    </head>
+
+    <body>
+   
+        <div id="test">item1</div>
+
+        <div class="test2">item2</div>
+
+        <div id="test3">item 3</div>
+   
+    </body>
+</html>

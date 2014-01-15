@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+  
+
+
+    <script>
+        
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+                $('#caja').mouseover(function(){
+
+                    $(this).css('background', 'red');
+                    //Se pone de color rojo cuando el mous se pasa por encima del div
+
+                });                
+                $('#caja').mouseout(function(){
+                    $(this).css('background','green');
+                    //Se pod de color vberde cuando el mose se quita del color verde
+                });
+
+            });
+    </script>
+
+    </head>
+        
+    <body>
+        <div id="caja"> caja1</div>
+    </body>
+</html>

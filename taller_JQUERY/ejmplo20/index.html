@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/spin.min.js" type="text/javascript"></script>
+  <style>
+  body, html
+  {
+    padding: 100px;
+  }
+  </style>
+
+
+    <script>
+        
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+               
+              var pet1=$('#main form').attr('action');
+              var met1 =$('#main form').attr('method');
+
+               $.ajax({
+                  beforeSned: function (){
+                    $('#status').spin({radius: 3, width: 2, height:3, legth:4});
+                    nom = document.fo.nombre.value;
+                    m = document.fo.mail.value;
+                    msj = document.fo.msj.value;
+
+
+                  },
+                  url: pet,
+                  type: met,
+                  data:(nombre:nom,  mail,:m , mensaje:msj),
+                  succec: function(resp){
+                    $('#status').html('img src="../img/ok.png"');
+                    console.log(resp)
+                  },
+
+                  error: function(jqXHR, estado, error){
+                    $('#status').html('img src="../img/ok.png"');
+                    console.log(estado)
+                    console.log(error)
+                  },
+                  complete: function(jqXHR, estado){
+                    $('#status').html('img src="../img/ok.png"');
+                    console.log(estado)
+                  },
+                  timeout: 10000;
+
+               });
+
+            });
+
+          
+
+    </script>
+ 
+    </head>
+        
+    <body>
+        <div id="main">
+            <h1>Formulcario d econtacto</h1>
+            <form action="peticion.php" name="fo" method="POST"></form>
+            <input type="text" name="nombre" placeholder="Nombre ..." required>
+            <input type="email" name="mail" placeholder="correo electronico.." required/>
+            <textarea name="mensaje" placeholder="mensaje" required></textarea>
+            <div style="display:block;width:60%;margin:0 auto">
+              <input type="submit" name="send" value="Enviar"/>
+              <div id="status"> 
+              
+                <!-- <img src="../img/x.png">-- >
+
+              </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

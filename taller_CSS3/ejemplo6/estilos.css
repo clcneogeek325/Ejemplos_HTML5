@@ -1,0 +1,28 @@
+ul li
+{
+	list-style-type:none;
+	font-size: 50px;
+	font-weight: bold;
+	color: red;
+}
+
+
+ul li::before      /*pne unna imaen antes de cada elemnto  li*/
+{
+	content: url(estrella.jpeg);
+}
+ul li::after        /*Pone un imagen despues de cada elemnto li*/
+{
+	content: url(estrella.jpeg);	
+} 
+p::first-letter   /*Moiica los valores del la primer letra de  los elemnto s parrafo*/
+{
+	font-size: 36px;
+	font-weight: bold;
+	color: blue;
+}
+p::first-line   /*Moiica los valores del la primera linea de  los elemnto s parrafo*/
+{
+	color:green;
+    text-decoration: underline;	 
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <script>
+        
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+
+              //el metodo attr sirve para setar y obtener valores a los atributos de una etiqueta
+              $('prueba').removeAttr('class');
+              //elimina la clase class del div
+     
+              $('#prueba').attr('clase', "cambieLaClase");
+              //aki funciona Set
+
+             var clase=$('#prueba').attr('class');//Fun Get
+             alert(clase);
+          //el metodo attr nos devuelve el valor de un atributio
+           
+            });
+    </script>
+  
+
+    </head>
+
+    <body>
+        <div id="prueba" class="pruebaClass"></div>
+        <a href="www.google.com">Buscador</a>
+   
+    </body>
+</html>

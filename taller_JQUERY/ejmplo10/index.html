@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+  
+
+
+    <script>
+        
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+                 
+                console.log($('#primero').next().text());
+                 //imprimer desde consola el texto que contiene el siguiete elemnto que esta despues del primer li
+                 
+                 console.log($('#test').parent().text());
+                 //se selecciona text y con el emetodo parent se impime desde consla lña etiqueta padre 
+
+                 console.log($('#padre').childrend().attr('id'));
+                 //me imprime por consola el id hijo del id padre
+                
+
+                 console.log($('#primero').siblings());
+                 //Nos imprime por consola todos los hermanos del id primero
+
+                 $('ul li').echa(function(index, elemento){
+                        console.log("Estos son los elemntos d el alista" + $(elemento).text());
+                        //Imprime cada uno de los texto que contiene las lsiata li
+                 });
+                
+            });
+    </script>
+
+    </head>
+        
+    <body>
+        <div>
+            <article id="padre">
+                Hey!!! .D
+                <div id="test">Soy el hijo</div>
+            </article>
+        </div>
+        <ul>
+            <li id="primero">Soy el primero</li>
+            <li>Soy el que sigue</li>
+            <li id="ultimo"></li>
+
+        </ul>
+       
+    </body>
+</html>

@@ -1,0 +1,8 @@
+.divident
+{
+	height:200px;
+	width: 50%;
+	background-color: green; 
+	-webkit-transform:rotate(20deg);
+
+}

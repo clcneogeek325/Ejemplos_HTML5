@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script>
+            <!--Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo--!>
+            $(document).on('ready', function () {
+                 
+                $('li').css({ <!--Poniendole fondo a todos los elemnto li--!>
+                    'background-color':'#000',
+                    'color':'red',
+                });
+                
+                $('div.miDiv article p').text("Hola selectores abanzados"); <!--seteando texto al elemento p que al mismo tiempo se en cuentra dentro de un article y esdte su ves se encuetra en un div con una clase miDiv --!>
+                $('#p1, #p2, #p3').text("Estamos seteando valores a parrafos con diferente div");
+                
+            });
+    </script>
+
+    </head>
+
+    <body>
+        <div>
+            <article>
+                <ul>
+                    <li>Lista 1</li>
+                    <li>lista 2</li>
+                    <li>lista 3</li>
+                </ul>
+            </article>
+        </div>
+
+
+        <div class="miDiv">
+        <article>
+            <p>
+                    Hola jquery
+            </p>
+        </article>
+        </div>
+
+        <div>
+            <article>
+                <p id="p1">Parrafo1</p>
+                <p id="p2">Parrfo2</p>
+                <p id="p3">Parrafo3</p>
+            </article>
+        </div>
+        
+    </body>
+</html>

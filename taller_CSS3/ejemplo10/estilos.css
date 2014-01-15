@@ -1,0 +1,25 @@
+b
+{
+	font-family: Arial, Helvetica, sans-serif;/*Son los 3 tipos de letras que existen el los 3 sistema soperatiovos*/
+}
+
+.parrafo1
+{
+	font-weight: bolder; /*convertir a otro tipo de letras*/
+	font-size: 35px; /*tamaño de las letras*/
+
+}
+
+.parrafo2
+{
+	font-style: italic;
+}
+                     /*Oblique e italic se paracen*/
+.parrafo3
+{
+	font-style: oblique;
+}
+.mayusculas
+{
+	font-variant: small-caps;    /*Convierte de minusculas a mayusculas*/
+}

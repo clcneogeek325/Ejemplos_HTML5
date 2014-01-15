@@ -1,0 +1,42 @@
+/*modificando el aspecto d los botones de navegacion*/
+a
+{
+	color: #333333;
+	text-decoration: none;
+}
+
+/*cuando el link no ha sido visitado*/
+a:link
+{
+	color: #900;
+}
+/*cuando el link ya ha sido visitado*/
+a:visited
+{
+	color: #003399;
+}
+/*cuando pasemos sobre los botones*/
+a:hover
+{
+	color: #CCC;
+}
+/*cuando le de click dentro de una caja de texto se cambiaran de color los borde*/
+input:focus
+{
+	background-color: #000;
+	color: #FFF;
+}
+input:hover
+{
+	background-color: #F00;
+}
+/*Sele aplica color de fondo al primer elemento li que este dentro de un ul*/
+ul li:first-child
+{
+	background-color: green;
+}
+/*Sele pone color de fondo al ultimo elemneto li que este n un ul*/
+ul li:last-child
+{
+	background-color: blue;
+}

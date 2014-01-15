@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script>
+            var seleccion;
+            <!--Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo--!>
+            $(document).on('ready', function () {
+                 
+                 seleccion = $('.ejem1');
+                 if (seleccion.length) <!--Se compreuba cuantos elemntos de la selecion tienen la clse ejem1 --!>
+                    console.log('Existen:' + seleccion.length + '  elementos')
+                 else
+                    console.log("no esiste ele elemnto seleccionado")
+                 
+                 seleccion.not('.cli').text('este objeto de seleccion no tiene la clase cli') <!--Simplemente setea texto a los elementos que no tienen la clase ejem1--!>
+
+
+                 seleccion.has('p').text('Este elemnto si tiene el elemento o p')<!--Esto setea texto a los--!>
+
+                 $('li').first().html('<strong>Soy ele nuemro 1</strong>');
+                 $('li').eq(2).text('soy ele elemnto numero 3');
+               
+                
+            });
+    </script>
+
+    </head>
+
+    <body>
+       <div class="ejem1 cli">
+            <p></p>
+       </div>
+
+       <div class="ejem1">
+        <span></span>
+       </div>
+
+       <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+       </ul>
+        
+    </body>
+</html>

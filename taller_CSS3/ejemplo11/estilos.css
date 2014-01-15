@@ -1,0 +1,11 @@
+@font-face
+{
+	font-family: "Cuadra";
+	src:url(font/rasegpl-bold-webfont.ttf), url(font/rasegpl-bold-webfont.eot), url(/home/neogeek/Escritorio/Documentos/Codigos/Html5/CSS3/ejemplo11/font/rasegpl-bold-webfont.woff);
+
+}
+
+.tip
+{
+	font-family: Cuadra;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script>
+            var seleccion;
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+                 
+                $("#parrafo").html("<strong>Strong significa negritas en html</strong>");
+                //se esta seteando texto aal id parrafo
+
+                var almacen = $("#parrafo2").html();
+                alert(almacen);
+                //esta obteniedo texto del id parrafo 2 y lo alacena en la vriable alamacen
+
+                $("#prueba").attr("class", "ejemplo");
+                //aque se reemplaza el id prueba por la clase ejemplo
+
+                var clase = $("#prueba2").attr("id");
+                //en la variable clase no esta devolviendo el id parrafo
+            });
+    </script>
+
+    </head>
+
+    <body>
+       <p id="parrafo"></p>
+       <p id="parrafo2">hola jquery</p>
+       <div id="prueba">
+       </div>
+       <div id="prueba2">
+       </div>
+       
+    </body>
+</html>

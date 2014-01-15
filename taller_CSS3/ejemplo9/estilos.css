@@ -1,0 +1,8 @@
+p
+{
+	height: 50px;
+	width: 50px;
+	border: solid;
+	overflow: hidden;/*Con oberflow estoy escondiendo todo lo que se salga del tamanio del parrafo*/
+	resize: both;/*Me permite la libertad al usuario de agranadar el parrafo*/
+}

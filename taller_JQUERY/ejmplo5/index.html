@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script>
+            var seleccion;
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+              
+              $('body, html').css('background', '#FFF');
+              //la linea anterior pude modificar solo una propiedad de una etiqueta
+              var cssH1 = {
+                'text-align':'center',
+                'color':'red'
+              }
+           
+              $('h1').css(cssH1);   //de esta forma se puede modificar mas de una propiedad a una etiqueta
+           
+            });
+    </script>
+    <style>
+        body, html
+        {
+            background: #CCC;
+            color: red;
+            margin: 0;
+            padding: 0;
+        }
+        #item1
+        {
+            background: #F6F6F6;
+            height: 50px;
+            margin: 5% auto;
+            width: 300px; 
+        }
+        #item2
+        {
+            display: block;
+            background: #000;
+            height: 50px;
+            margin: 5% auto;
+            width: 300px;
+
+        }
+    </style>
+
+    </head>
+
+    <body>
+        <h1>Metodo .css de jquery</h1>
+        <div id="item1">item1</div>
+        <div id="item2">iterm2</div>
+    </body>
+</html>

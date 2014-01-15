@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+    </head>
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .divCapa{
+            background-color:#404040;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+    </style >
+    <script>
+        $(document).read(funtion(){
+                $("a").mouseover(funtion(event){
+                    $("#divCapa").addClass("colorDiv"
+                    );
+                });
+                $("a").mouseout(funtion(event){
+                    $("#divCapa").removeClass("colorDiv"
+                    );
+                });
+        });
+    </script>
+    <body>
+        <div id="divCapa">
+          [+] iniciar proceso
+        </div>
+        <a href="">
+            Efecto
+        </a>
+        
+    </body>
+</html>

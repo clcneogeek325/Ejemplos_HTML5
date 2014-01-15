@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+  
+
+
+    <script>
+        
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+             
+             alert("Version "+ $.browser.version + "--Navegador IE"+$.browser.msie);
+             //Este segmento de codigo verifica que el navegado es IE y no soporta html5
+                
+            });
+    </script>
+
+    </head>
+        
+    <body>
+  
+    </body>
+</html>

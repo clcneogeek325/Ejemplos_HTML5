@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+                Ejemplo 1 JQuery
+        </title>
+        <meta charset="utf-8">
+
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <style>
+           body ,html
+           {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+           }
+           header
+           {
+            display: block;
+            margin: 0 auto;
+            width: 365px;
+           }
+           #e1, #e2
+           {
+            background: #0000FF;
+            display: block;
+            height: 100px;
+            margin: 20px auto;
+            width: 400px;
+           }
+
+
+           #e1
+           {
+            background-color: #FF0040;
+            height: 150px;
+           }
+           #e2
+           {
+            ba
+            padding: 15px;
+            border-radius: 60px 0 60px 0;
+           }
+           p
+           {
+            margin-left: 10px;
+           }
+
+    </style>
+    <script>
+        
+            //Esto siempre debe ir al principio, ready es un metodo de jquery, que me sirver para saber cuando el documento ya esta listo y se ejecutan las funciones que estan dentro de este metodo
+            $(document).on('ready', function () {
+             
+            //width es un metodo que la usamos para obtener el ancho
+            //height es un metodo que la usamos para obtener el alto
+            var ancho=$('header img').width();
+            //ancho me guarda en width es el ancho de mi imagen         
+
+            var alto = $('header img').height();
+            //la variable alto nos guarda el alto de la imagen
+
+            var pos = $('#e2 p').position();
+            console.log('Position Left:' + pos.left + 'Position Top:' + pos.top);
+
+           
+            });
+    </script>
+  
+
+    </head>
+
+    <body>
+   
+       <header>            
+            <img src="/home/neogeek/Imágenes/555716_285757804835744_128240760587450_627319_47696946_n.jpg" alt="CF"/>
+       </header>
+
+       <div id="e1"></div>
+
+        <div id="e2"></div>
+
+        <p>Hola mundo</p>
+    </body>
+</html>

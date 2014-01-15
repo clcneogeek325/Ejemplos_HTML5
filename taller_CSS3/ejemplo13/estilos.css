@@ -1,0 +1,12 @@
+body
+{
+	background-image:  url(img/100_5327.jpg),url(img/back-track.jpeg);
+	background-size: 30% , 50%; /*propiedades de la primer inage, dela segunda imagen*/
+	background-repeat: no-repeat, no-repeat;
+	background-position: center bottom, left top; 
+}
+
+.space
+{
+	height: 500px;
+}
